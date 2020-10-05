@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cloud-h2
+  cloud:
+    config:
+      uri: http://${CLOUD_CONFIG_URI:localhost:8080}
+server:
+  port: ${PORT:8705}

@@ -1,15 +1,15 @@
 server:
   port: ${PORT:8761}
 eureka:
-  server:
-    enableSelfPreservation: false
-    evictionIntervalTimerInMs: 3000
+#  server:
+#    enableSelfPreservation: false
+#    evictionIntervalTimerInMs: 3000
   client:
     registerWithEureka: false
     fetchRegistry: false
-  instance:
-    leaseRenewalIntervalInSeconds: 1
-    leaseExpirationDurationInSeconds: 2
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
 spring:
   security:
     user:
