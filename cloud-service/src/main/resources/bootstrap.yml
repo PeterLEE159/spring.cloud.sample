@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cloud-client
+  cloud:
+    config:
+      uri: http://${CLOUD_CONFIG_URI:localhost:8080}
+server:
+  port: 809${SEQ_NO:1}
