@@ -17,7 +17,10 @@ public class SecurityConfigAdapter extends WebSecurityConfigurerAdapter {
 	SecurityService securityService;
 	
 	@Autowired
-	BCryptPasswordEncoder passwordEncoder; 
+	BCryptPasswordEncoder passwordEncoder;
+	
+//	@Autowired
+//	SecurityFilter filter;
 	
 	@Bean
 	public BCryptPasswordEncoder initEncoderBeanObject() {
@@ -29,10 +32,11 @@ public class SecurityConfigAdapter extends WebSecurityConfigurerAdapter {
 		http.csrf().disable();
 		
 		http.authorizeRequests()
-			.antMatchers("/**")
-			.hasIpAddress("192.168.0.4")
+			.antMatchers("/users/**")
+			.permitAll()
 			.and()
-			.addFilter(this.getAuthenticationFilter());
+			.addFilter(this.getAuthenticationFilter())
+			.antMatcher("/products/**");
 		
 		http.headers().frameOptions().disable();
 	}
