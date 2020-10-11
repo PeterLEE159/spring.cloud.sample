@@ -8,31 +8,25 @@
 		<version>1.0</version>
 		<relativePath>../parent.pom.xml</relativePath>
 	</parent>
-	<groupId>com.recom</groupId>
-	<artifactId>cloud-service-h2</artifactId>
+	<groupId>com.cloud.eureka</groupId>
+	<artifactId>cloud-eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>cloud-service-h2</name>
-	<description>Recommendation System</description>
+	<name>cloud-eureka</name>
+	<description>Demo project for Spring Boot</description>
 
-	
 	<dependencies>
+	
+		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-		
-		
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -50,15 +44,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 		<dependency>
-		    <groupId>com.h2database</groupId>
-		    <artifactId>h2</artifactId>
-		    <scope>runtime</scope>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>	    
 		</dependency>
-			
 	</dependencies>
+	
 
 	<build>
 		<plugins>

@@ -1,8 +1,5 @@
 spring:
-  application:
-    name: zuul-server
   cloud:
     config:
-      uri: http://${CLOUD_CONFIG_URI:localhost:8080}
-server:
-  port: ${PORT:8081}
+      uri: http://${CLOUD_CONFIG_URI:localhost:8012}
+      name: config-server

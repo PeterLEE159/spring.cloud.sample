@@ -1,2 +1,26 @@
+config-location: /project/spring/spring.cloud.sample/cloud-config-server
+spring:
+  application.name: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  profiles.active: 
+    - native
+#    - git
+  cloud.config.server:
+    native:
+      search-locations: file://${config-location}/src/main/resources/remote
+    git:
+      uri: https://github.com/PeterLEE159/spring.cloud.config
+      username: peterlee13795@gmail.com
+      password: tlfnejr105
+      clone-on-start: true
+
+management.endpoints.web.exposure.include: bus-refresh
+    
 server:
-  port: ${PORT:8080}
+  port: ${PORT:8012}
+  
+    

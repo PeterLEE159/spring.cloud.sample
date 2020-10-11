@@ -1,0 +1,28 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management.endpoints.web.exposure.include: bus-refresh
+
+jwt:
+  secret: f1oinfo19zaxqqq56451
+  expiration: 31536000000
+
+ip:
+  loadBalancer: 192.168.0.8
+  
+uri:
+  user:
+    signin: /auth/signin
+    signup: /auth/signup
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
+
+domain:
+  users: /users-ws
