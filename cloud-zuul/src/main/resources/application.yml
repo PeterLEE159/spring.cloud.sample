@@ -4,10 +4,14 @@ server.port: ${PORT:8081}
 eureka:
   instance:
     instanceId: ${spring.application.name}-${random.uuid}
-
-uri-zuul:
-  h2console:
-    path: ${domain.users}/h2-console/**
-  user:
-    signup: ${domain.users}/auth
-    signin: ${domain.users}/auth/signin
+uri:
+  zuul:
+    h2console:
+      path: ${domain.users}/h2-console/**
+    user:
+      signup: ${domain.users}/auth
+      signin: ${domain.users}/auth/signin
+  actuator: 
+    path: /actuator/*
+    
+management.endpoints.web.exposure.include: beans,health,routes,httptraces
