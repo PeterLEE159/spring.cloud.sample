@@ -8,7 +8,7 @@ spring:
 management.endpoints.web.exposure.include: bus-refresh
 
 jwt:
-  secret: f1oinfo19zaxqqq56451
+  secret: '{cipher}AQBYhFkMMzY1EE6A1aQSDlaFwqQxhGogKSAHRr7rwa+CWsognd4nIIf79tDOODlFubQudiSIVXHJD5Vwv6FtwOPA8xZgi2Lb2yE3irMe94AwBr8XCSaL0AezmEMq57noD/99Ia/TeOrlUkI/EssqyXe0b50Q6lia2r1oXo6SGuDdpxTYKrh9l+BkfB/kdE9650JBKOu+N2DA0YiiiUZe+0PrG3OVnI5T3QVeAQcjukeF/0u/jEh+1ajzVunMHLRkwE8e9mYRQFaMJHTkoaQm4dUf4tJJaZ3Tdao29+qOiRLQZ75ALugHiaFlVevetM7zNK3dcWgaHuO7JHLx5/tG2WDNmwHzgUszKqh+R89JrV/rAzjOnCF9LpEEQkQvJGRoywwgApdf6TMrFthT70Tc5PqE'
   expiration: 31536000000
 
 ip:

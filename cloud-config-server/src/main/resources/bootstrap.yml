@@ -1,0 +1,3 @@
+encrypt.key-store:    location: file://${KEY_STORE_PATH:/Users/PeterLEE/apiEncryptKey.jks}
+    password: tlfnejr
+    alias: encryptKey
